@@ -58,30 +58,75 @@
 
 # Types of Atributes and methods
 
-class Animal:
-    a = 10 # class attribute
+# class Animal:
+#     a = 10 # class attribute
 
-    def __init__(self, name, age):
-        self.name = name # instance attribute
-        self.age = age # instance attribute
+#     def __init__(self, name, age):
+#         self.name = name # instance attribute
+#         self.age = age # instance attribute
 
-    def details(self): # instance method
-        print(f"Name: {self.name}, Age: {self.age}")
+#     def details(self): # instance method
+#         print(f"Name: {self.name}, Age: {self.age}") 
 
-    @classmethod
-    def hello(cls):
-        print("Hello, I am an animal") # class method
+#     @classmethod
+#     def hello(cls):
+#         print("Hello, I am an animal") # class method
 
-    @staticmethod
-    def info():
-        print("Animals are multicellular eukaryotic organisms") # static method    
+#     @staticmethod
+#     def info():
+#         print("Animals are multicellular eukaryotic organisms") # static method    
 
-obj = Animal("Dog", 5)
+# obj = Animal("Dog", 5)
 
-print(obj.a) # accessing class attribute using object
-print(obj.name) # accessing instance attribute using object
-print(obj.age) # accessing instance attribute using object
+# print(obj.a) # accessing class attribute using object
+# print(obj.name) # accessing instance attribute using object
+# print(obj.age) # accessing instance attribute using object
 
-obj.details() # calling instance method using object
+# obj.details() # calling instance method using object
 
 
+# Inhertiance
+
+# class Animal:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def details(self):
+#         print(f"Name: {self.name}, Age: {self.age}")
+
+# class Human(Animal):
+#     pass
+
+# obj = Animal("Dog", 5)
+# obj2 = Human("John", 30)
+
+# obj.details() # calling method of parent class using object of parent class
+# obj2.details() # calling method of parent class using object of child class
+
+
+# constructor in inheritance
+
+class bagFactory:
+    def __init__(self, material, pockets, zips):
+        self.material = material
+        self.pockets = pockets
+        self.zips = zips
+
+    def display(self):
+        print(f"Material: {self.material}, Pockets: {self.pockets}, Zips: {self.zips}")
+
+class Reebok(bagFactory):
+    def __init__(self, material, pockets, zips, color):
+        super().__init__(material, pockets, zips) # calling constructor of parent class
+        self.color = color # adding a new attribute specific to the Reebok class
+
+    def display(self):
+        super().display() # calling the display method of the parent class
+        print(f"Color: {self.color}")
+
+bag1 = bagFactory("Leather", 3, 2)
+bag2 = Reebok("Canvas", 2, 1, "Red")
+
+bag1.display() # calling display method of bagFactory class
+bag2.display() # calling display method of Reebok class
