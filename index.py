@@ -107,26 +107,81 @@
 
 # constructor in inheritance
 
-class bagFactory:
-    def __init__(self, material, pockets, zips):
-        self.material = material
-        self.pockets = pockets
-        self.zips = zips
+# class bagFactory:
+#     def __init__(self, material, pockets, zips):
+#         self.material = material
+#         self.pockets = pockets
+#         self.zips = zips
 
-    def display(self):
-        print(f"Material: {self.material}, Pockets: {self.pockets}, Zips: {self.zips}")
+#     def display(self):
+#         print(f"Material: {self.material}, Pockets: {self.pockets}, Zips: {self.zips}")
 
-class Reebok(bagFactory):
-    def __init__(self, material, pockets, zips, color):
-        super().__init__(material, pockets, zips) # calling constructor of parent class
-        self.color = color # adding a new attribute specific to the Reebok class
+# class Reebok(bagFactory):
+#     def __init__(self, material, pockets, zips, color):
+#         super().__init__(material, pockets, zips) # calling constructor of parent class
+#         self.color = color # adding a new attribute specific to the Reebok class
 
-    def display(self):
-        super().display() # calling the display method of the parent class
-        print(f"Color: {self.color}")
+#     def display(self):
+#         super().display() # calling the display method of the parent class
+#         print(f"Color: {self.color}")
 
-bag1 = bagFactory("Leather", 3, 2)
-bag2 = Reebok("Canvas", 2, 1, "Red")
+# bag1 = bagFactory("Leather", 3, 2)
+# bag2 = Reebok("Canvas", 2, 1, "Red")
 
-bag1.display() # calling display method of bagFactory class
-bag2.display() # calling display method of Reebok class
+# bag1.display() # calling display method of bagFactory class
+# bag2.display() # calling display method of Reebok class
+
+
+# Polymorphism
+
+# def hello():
+#     print("Hello, I am a function")
+
+# def hello():
+#     print("Hello, I am another function with the same name")
+
+# hello() # calling the second hello function, which overrides the first one
+
+# class Animal:
+#     def sound(self):
+#         print("Animal makes a sound")
+
+# class Dog(Animal):
+#     def sound(self):
+#         print("Dog barks")
+
+# obj = Animal()
+# obj2 = Dog()
+
+# obj.sound() # calling the sound method of Animal class
+# obj2.sound() # calling the sound method of Dog class, which overrides the sound method of Animal class
+
+# Method Overloading
+
+# class Calculator:
+#     def add (self, a, b):
+#         return a + b
+
+#     def add (self, a,b,c = None):
+#         if c is not None:
+#             return a + b + c
+#         else:
+#             return a + b 
+
+# calc = Calculator()
+# print(calc.add(2, 3)) # calling the add method with 2 arguments
+# print(calc.add(2, 3, 4)) # calling the add method with 3 arguments
+
+
+# Method Overriding
+
+class Animal:
+    def sound(self):
+        print("Animal makes a sound")
+
+class Dog(Animal):
+    def sound(self):
+        print("Dog barks")
+
+obj = Dog()
+obj.sound() # calling the sound method of Dog class, which overrides the sound method of Animal class
