@@ -175,13 +175,43 @@
 
 # Method Overriding
 
-class Animal:
-    def sound(self):
-        print("Animal makes a sound")
+# class Animal:
+#     def sound(self):
+#         print("Animal makes a sound")
 
-class Dog(Animal):
-    def sound(self):
-        print("Dog barks")
+# class Dog(Animal):
+#     def sound(self):
+#         print("Dog barks")
 
-obj = Dog()
-obj.sound() # calling the sound method of Dog class, which overrides the sound method of Animal class
+# obj = Dog()
+# obj.sound() # calling the sound method of Dog class, which overrides the sound method of Animal class
+
+
+# Encapsulation
+
+class BankAccount:
+    def __init__(self, account, balance):
+        self.account = account
+        self.__balance = balance # private attribute
+
+    def display_account_info(self):
+        print("Account:", self.account)
+
+    def deposit(self, amount):
+        self.__balance += amount # modifying private attribute
+
+    def withdraw(self, amount):
+        if amount <= self.__balance:
+            self.__balance -= amount # modifying private attribute
+        else:
+            print("Insufficient balance")
+    
+    def get_balance(self):
+        return self.__balance # accessing private attribute
+
+
+account = BankAccount("123456789", 1000)
+account.display_account_info() # calling public method to display account info
+account.deposit(500) # calling public method to deposit money
+account.withdraw(200) # calling public method to withdraw money
+print(account.get_balance()) # calling public method to get balance
