@@ -189,29 +189,58 @@
 
 # Encapsulation
 
-class BankAccount:
-    def __init__(self, account, balance):
-        self.account = account
-        self.__balance = balance # private attribute
+# class BankAccount:
+#     def __init__(self, account, balance):
+#         self.account = account
+#         self.__balance = balance # private attribute
 
-    def display_account_info(self):
-        print("Account:", self.account)
+#     def display_account_info(self):
+#         print("Account:", self.account)
 
-    def deposit(self, amount):
-        self.__balance += amount # modifying private attribute
+#     def deposit(self, amount):
+#         self.__balance += amount # modifying private attribute
 
-    def withdraw(self, amount):
-        if amount <= self.__balance:
-            self.__balance -= amount # modifying private attribute
-        else:
-            print("Insufficient balance")
+#     def withdraw(self, amount):
+#         if amount <= self.__balance:
+#             self.__balance -= amount # modifying private attribute
+#         else:
+#             print("Insufficient balance")
     
-    def get_balance(self):
-        return self.__balance # accessing private attribute
+#     def get_balance(self):
+#         return self.__balance # accessing private attribute
 
 
-account = BankAccount("123456789", 1000)
-account.display_account_info() # calling public method to display account info
-account.deposit(500) # calling public method to deposit money
-account.withdraw(200) # calling public method to withdraw money
-print(account.get_balance()) # calling public method to get balance
+# account = BankAccount("123456789", 1000)
+# account.display_account_info() # calling public method to display account info
+# account.deposit(500) # calling public method to deposit money
+# account.withdraw(200) # calling public method to withdraw money
+# print(account.get_balance()) # calling public method to get balance
+
+
+# Abstraction
+
+# from abc import ABC, abstractmethod
+
+# class Vehicle(ABC):
+#     @abstractmethod
+#     def start(self):
+#         pass
+
+#     @abstractmethod
+#     def stop(self):
+#         pass
+
+# class Car(Vehicle):
+#     def start(self):
+#         print("Car started")
+
+#     def stop(self):
+#         print("Car stopped")
+
+# obj=Car()
+# obj.start() # calling the start method of Car class
+# obj.stop() # calling the stop method of Car class
+
+# obj2=Vehicle() # trying to create an object of abstract class Vehicle will raise an error
+
+ 
