@@ -243,4 +243,27 @@
 
 # obj2=Vehicle() # trying to create an object of abstract class Vehicle will raise an error
 
- 
+
+# Dunder Methods
+
+class Student:
+    def __init__(self, name, id):       # constructor or __init__ method
+        self.name = name
+        self.id = id
+
+    def __str__(self):                  # dunder method to return a string representation of the object
+        return f"Student Name: {self.name}, Student ID: {self.id}"
+
+s1 = Student("Suman", 23)
+print(s1) # calling the __str__ method of Student class
+
+class Book:
+    def __init__(self,length):
+        self.length = length
+
+    def __len__(self):                  # dunder method to return the length of the object
+        return self.length
+    
+b1 = Book(100)
+print(len(b1)) # calling the __len__ method of Book class
+
