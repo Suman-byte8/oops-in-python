@@ -246,24 +246,39 @@
 
 # Dunder Methods
 
-class Student:
-    def __init__(self, name, id):       # constructor or __init__ method
-        self.name = name
-        self.id = id
+# class Student:
+#     def __init__(self, name, id):       # constructor or __init__ method
+#         self.name = name
+#         self.id = id
 
-    def __str__(self):                  # dunder method to return a string representation of the object
-        return f"Student Name: {self.name}, Student ID: {self.id}"
+#     def __str__(self):                  # dunder method to return a string representation of the object
+#         return f"Student Name: {self.name}, Student ID: {self.id}"
 
-s1 = Student("Suman", 23)
-print(s1) # calling the __str__ method of Student class
+# s1 = Student("Suman", 23)
+# print(s1) # calling the __str__ method of Student class
 
-class Book:
-    def __init__(self,length):
-        self.length = length
+# class Book:
+#     def __init__(self,length):
+#         self.length = length
 
-    def __len__(self):                  # dunder method to return the length of the object
-        return self.length
+#     def __len__(self):                  # dunder method to return the length of the object
+#         return self.length
     
-b1 = Book(100)
-print(len(b1)) # calling the __len__ method of Book class
+# b1 = Book(100)
+# print(len(b1)) # calling the __len__ method of Book class
 
+
+# decorators
+
+def deco_greet(func):
+    def wrapper():      # inner function that wraps the original function
+        print("Before calling the function")
+        func()          # calling the original function
+        print("After calling the function")
+    return wrapper
+
+@deco_greet     # applying the decorator to the greet function
+def greet():
+    print("Hello, welcome to the world of Python!")
+
+greet() # calling the decorated greet function

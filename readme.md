@@ -157,9 +157,6 @@ obj.details()
 - `@classmethod` defines a class method.
 - `@staticmethod` defines a static method.
 
-### Analogy
-A class attribute is like a school motto shared by all students. An instance attribute is like each student’s personal name.
-
 ---
 
 ## 5. Inheritance
@@ -438,3 +435,55 @@ This project demonstrates the foundational concepts of Python OOP through simple
 - how encapsulation protects internal data,
 - how abstraction defines behavior contracts,
 - and how dunder methods make custom classes behave like built-in types.
+
+---
+
+## 10. Decorators
+Decorators are a Python feature that lets you modify or enhance functions and methods without changing their code. In the class examples above, `@classmethod`, `@staticmethod`, and `@abstractmethod` are all decorators.
+
+- `@classmethod` transforms a method so it receives the class (`cls`) instead of the instance (`self`).
+- `@staticmethod` defines a method that does not receive either `self` or `cls`; it behaves like a regular function placed inside the class.
+- `@abstractmethod` marks a method that must be implemented by subclasses when using an abstract base class.
+
+Example:
+
+```python
+class Animal:
+    @classmethod
+    def hello(cls):
+        print("Hello, I am an animal")
+
+    @staticmethod
+    def info():
+        print("Animals are multicellular eukaryotic organisms")
+```
+
+General decorator syntax:
+
+```python
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Before function call")
+        result = func(*args, **kwargs)
+        print("After function call")
+        return result
+    return wrapper
+
+@my_decorator
+def greet(name):
+    print(f"Hello, {name}")
+
+greet("Suman")
+```
+
+- `@my_decorator` applies the decorator to `greet`.
+- The original function is wrapped, allowing extra behavior before and after the call.
+
+### Analogy
+A decorator is like putting a protective case on your phone: the phone works the same, but the case adds new behavior (protection) without changing the phone itself.
+
+### Why decorators matter in OOP
+Decorators keep class methods organized and reusable. They let Python express special method behavior clearly, so method type and contract are visible at a glance.
+
+### Example in the README examples
+The `@classmethod` and `@staticmethod` examples shown above are the most common decorators in class-based OOP code.
