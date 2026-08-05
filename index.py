@@ -270,15 +270,38 @@
 
 # decorators
 
-def deco_greet(func):
-    def wrapper():      # inner function that wraps the original function
-        print("Before calling the function")
-        func()          # calling the original function
-        print("After calling the function")
-    return wrapper
+# def deco_greet(func):
+#     def wrapper():      # inner function that wraps the original function
+#         print("Before calling the function")
+#         func()          # calling the original function
+#         print("After calling the function")
+#     return wrapper
 
-@deco_greet     # applying the decorator to the greet function
-def greet():
-    print("Hello, welcome to the world of Python!")
+# @deco_greet     # applying the decorator to the greet function
+# def greet():
+#     print("Hello, welcome to the world of Python!")
 
-greet() # calling the decorated greet function
+# greet() # calling the decorated greet function
+
+
+# *args and **kwargs
+
+def add_numbers(*args): # *args allows for a variable number of positional arguments
+
+    print("Arguments received:", args) # printing the arguments received
+
+    total = 0
+    for num in args:
+        total += num
+    return total
+
+print(add_numbers(1, 2, 3, 4, 5)) # calling the add_numbers function with multiple arguments
+
+def print_info(**kwargs): # **kwargs allows for a variable number of keyword arguments
+    
+    print("Keyword arguments received:", kwargs) # printing the keyword arguments received
+
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+    
+print_info(name="Suman", age=23, city="Kathmandu") # calling the print_info function with multiple keyword arguments

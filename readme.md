@@ -111,6 +111,34 @@ print(reebok.material, reebok.zips, reebok.color, reebok.pockets)
 ### Analogy
 A constructor is like moving into a new house and setting the furniture and paint before you start living there.
 
+## 3.1 `*args` and `**kwargs`
+Python uses `*args` and `**kwargs` to let functions and methods accept a flexible number of arguments.
+
+- `*args` collects extra positional arguments into a tuple.
+- `**kwargs` collects extra keyword arguments into a dictionary.
+
+Example:
+
+```python
+class Student:
+    def __init__(self, name, age, *args, **kwargs):
+        self.name = name
+        self.age = age
+        self.extra = args
+        self.details = kwargs
+
+s1 = Student("Suman", 23, "A+", country="India", city="Delhi")
+print(s1.name)
+print(s1.age)
+print(s1.extra)
+print(s1.details)
+```
+
+- `s1.extra` holds the additional positional values: `("A+",)`.
+- `s1.details` holds the keyword arguments as a dictionary: `{'country': 'India', 'city': 'Delhi'}`.
+
+This is useful when you want constructors or methods to accept optional or variable data without changing the method signature every time.
+
 ---
 
 ## 4. Types of Attributes and Methods
