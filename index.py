@@ -286,22 +286,32 @@
 
 # *args and **kwargs
 
-def add_numbers(*args): # *args allows for a variable number of positional arguments
+# def add_numbers(*args): # *args allows for a variable number of positional arguments
 
-    print("Arguments received:", args) # printing the arguments received
+#     print("Arguments received:", args) # printing the arguments received
 
-    total = 0
-    for num in args:
-        total += num
-    return total
+#     total = 0
+#     for num in args:
+#         total += num
+#     return total
 
-print(add_numbers(1, 2, 3, 4, 5)) # calling the add_numbers function with multiple arguments
+# print(add_numbers(1, 2, 3, 4, 5)) # calling the add_numbers function with multiple arguments
 
-def print_info(**kwargs): # **kwargs allows for a variable number of keyword arguments
+# def print_info(**kwargs): # **kwargs allows for a variable number of keyword arguments
     
-    print("Keyword arguments received:", kwargs) # printing the keyword arguments received
+#     print("Keyword arguments received:", kwargs) # printing the keyword arguments received
 
-    for key, value in kwargs.items():
-        print(f"{key}: {value}")
+#     for key, value in kwargs.items():
+#         print(f"{key}: {value}")
     
-print_info(name="Suman", age=23, city="Kathmandu") # calling the print_info function with multiple keyword arguments
+# print_info(name="Suman", age=23, city="Kathmandu") # calling the print_info function with multiple keyword arguments
+
+
+# ternary operator
+
+a = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
+b = [i for i in a if i % 2==0]
+
+
+print(b) # printing the list b which contains even numbers from list a and double of odd numbers from list a
