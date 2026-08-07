@@ -309,9 +309,25 @@
 
 # ternary operator
 
-a = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+# a = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
 
-b = [i for i in a if i % 2==0]
+# b = [i for i in a if i % 2==0]
 
 
-print(b) # printing the list b which contains even numbers from list a and double of odd numbers from list a
+# print(b) # printing the list b which contains even numbers from list a and double of odd numbers from list a
+
+
+# Lambda function
+
+# check = lambda x: "even number" if x%2==0 else "odd number" # lambda function to check if a number is even or odd
+
+# print(check(10)) # calling the lambda function with an even number
+# print(check(11)) # calling the lambda function with an odd number
+
+addition = lambda a,b : a + b
+
+print(addition(12,21)) # calling the lambda function to calculate the addition of two numbers
+
+square = lambda x : x*x
+
+print(square(5)) # calling the lambda function to calculate the square of a number
