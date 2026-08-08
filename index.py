@@ -324,10 +324,30 @@
 # print(check(10)) # calling the lambda function with an even number
 # print(check(11)) # calling the lambda function with an odd number
 
-addition = lambda a,b : a + b
+# addition = lambda a,b : a + b
 
-print(addition(12,21)) # calling the lambda function to calculate the addition of two numbers
+# print(addition(12,21)) # calling the lambda function to calculate the addition of two numbers
 
-square = lambda x : x*x
+# square = lambda x : x*x
 
-print(square(5)) # calling the lambda function to calculate the square of a number
+# print(square(5)) # calling the lambda function to calculate the square of a number
+
+
+# map, filter and zip
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+squared_numbers = list(map(lambda x : x*x, numbers)) # using map to apply a lambda function to each element of the list
+
+print(squared_numbers) # printing the list of squared numbers
+
+even_numbers = list(filter(lambda x : x%2 == 0, numbers)) # using filter to appy lambda function to each element of the list to check the even number
+
+print(even_numbers)
+
+names = ["Suman", "Rahul", "Amit"]
+marks = [100 , 80 , 90]
+
+results = list(zip(names, marks))
+
+print(results)
