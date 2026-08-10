@@ -15,6 +15,13 @@
             "grades": {
                 "Mathematics": 89.0
             }
+        },
+        {
+            "name": "Peter Parker",
+            "age": 18,
+            "email": "peter@disney.com",
+            "roll_no": "STU-101",
+            "grades": {}
         }
     ],
     "teachers": [
@@ -23,6 +30,12 @@
             "age": 1800,
             "email": "thorodinsonasgard@marvel.com",
             "teacher_id": "874596"
+        },
+        {
+            "name": "Captain America",
+            "age": 200,
+            "email": "steverogers@marvel.com",
+            "teacher_id": "TCH-897587"
         }
     ]
 }
