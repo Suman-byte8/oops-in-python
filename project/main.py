@@ -1,3 +1,4 @@
+from os import name
 import subprocess
 import json
 from abc import ABC, abstractmethod
@@ -70,10 +71,43 @@ class Student(Persons):
     def show_details(self):
         pass
 
-stud = Student()
 
+class Teacher(Persons):
 
+    def get_roles(self):
+        return "teacher"
+
+    def register(self):
+        name = input('tell your name:-->')
+        age = int(input('tell your age:-->'))
+        email = input('tell your email:-->')
+        teacher_id = input('tell your teacher id:-->')
+
+        if not Persons.validate_email(email):
+            print("invalid email id")
+            return
         
+        for i in data["teachers"]:
+            if i["teacher_id"] == teacher_id:
+                print("teacher already exists")
+                return
+        
+        data['teachers'].append({
+            'name': name,
+            'age': age,
+            'email': email,
+            'teacher_id': teacher_id})
+        save()
+        print(f'Teacher {name} registered successfully!')
+
+    def show_details(self):
+        pass
+
+
+
+
+stud = Student()
+teacher = Teacher()
 
 
 
@@ -88,3 +122,6 @@ choice = int(input("Please tell your choice: "))
 
 if choice == 1:
     stud.register()
+
+if choice == 2:
+    teacher.register()

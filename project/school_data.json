@@ -6,7 +6,21 @@
             "email": "8759127658itisaha@gmail.com",
             "roll_no": "D25654520",
             "grades": {}
+        },
+        {
+            "name": "Vision",
+            "age": 3,
+            "email": "avengersvision@gmail.com",
+            "roll_no": "9",
+            "grades": {}
         }
     ],
-    "teachers": []
+    "teachers": [
+        {
+            "name": "Thor Odinson",
+            "age": 1800,
+            "email": "thorodinsonasgard@marvel.com",
+            "teacher_id": "874596"
+        }
+    ]
 }
