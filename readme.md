@@ -515,3 +515,18 @@ Decorators keep class methods organized and reusable. They let Python express sp
 
 ### Example in the README examples
 The `@classmethod` and `@staticmethod` examples shown above are the most common decorators in class-based OOP code.
+
+---
+
+## 11. Hands-on Project: EduPulse Management System
+
+The `project/` subfolder contains a practical application of the OOP concepts described in this guide:
+
+- **Classes & Inheritance**: `Persons` (Abstract Parent Class), `Student` (Child Class), and `Teacher` (Child Class).
+- **Data Storage**: Persistent storage in `school_data.json`.
+- **Interfaces**:
+  - CLI application via [`main.py`](file:///c:/Users/87591/Desktop/OOPS/project/main.py)
+  - Streamlit Light-Theme Web UI via [`app.py`](file:///c:/Users/87591/Desktop/OOPS/project/app.py)
+
+For full details and instructions on running the app, see [project/README.md](file:///c:/Users/87591/Desktop/OOPS/project/README.md).
+
