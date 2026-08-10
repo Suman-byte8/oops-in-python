@@ -12,7 +12,9 @@
             "age": 3,
             "email": "avengersvision@gmail.com",
             "roll_no": "9",
-            "grades": {}
+            "grades": {
+                "Mathematics": 89.0
+            }
         }
     ],
     "teachers": [
