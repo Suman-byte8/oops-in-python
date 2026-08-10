@@ -1,0 +1,12 @@
+{
+    "students": [
+        {
+            "name": "Suman",
+            "age": 23,
+            "email": "8759127658itisaha@gmail.com",
+            "roll_no": "D25654520",
+            "grades": {}
+        }
+    ],
+    "teachers": []
+}
