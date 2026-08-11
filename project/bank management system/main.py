@@ -6,25 +6,14 @@ from models.storage import save
 
 
 
-
-
-
-savings_account = SavingsAccount()
-current_account = CurrentAccount()
-
-
-
-
-
-
-# savings_account = SavingsAccount("123456", "savings", "Alice", 1000)
-# savings_account.create_account()            # Savings account created successfully for Alice
-# print(savings_account.get_balance())        # 1000
-# savings_account.withdraw(500)               # Minimum balance of 500 required (1000 - 500 <= 500)
-# print(savings_account.get_balance())        # 1000   
-# savings_account.withdraw(1500)              # Insufficient balance (1500 > 1000)
-# print(savings_account.get_balance())        # 1000
-# savings_account.close_account()             # Account 123456 closed successfully
+savings_account = SavingsAccount("123456", "savings", "Alice", 1000)
+savings_account.create_account()            # Savings account created successfully for Alice
+print(savings_account.get_balance())        # 1000
+savings_account.withdraw(500)               # Minimum balance of 500 required (1000 - 500 <= 500)
+print(savings_account.get_balance())        # 1000   
+savings_account.withdraw(1500)              # Insufficient balance (1500 > 1000)
+print(savings_account.get_balance())        # 1000
+savings_account.close_account()             # Account 123456 closed successfully
 
 
 # current_account = CurrentAccount("789012", "current", "Bob", 2000)

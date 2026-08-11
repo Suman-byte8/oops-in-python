@@ -1,0 +1,33 @@
+{
+    "savings_accounts": [
+        {
+            "account_number": "123456",
+            "account_type": "savings",
+            "account_holder_name": "Alice",
+            "initial_balance": 1000,
+            "balance": 1000
+        },
+        {
+            "account_number": "123456",
+            "account_type": "savings",
+            "account_holder_name": "Alice",
+            "initial_balance": 1000,
+            "balance": 1000
+        },
+        {
+            "account_number": "123456",
+            "account_type": "savings",
+            "account_holder_name": "Alice",
+            "initial_balance": 1000,
+            "balance": 1000
+        },
+        {
+            "account_number": "123456",
+            "account_type": "savings",
+            "account_holder_name": "Alice",
+            "initial_balance": 1000,
+            "balance": 1000
+        }
+    ],
+    "current_accounts": []
+}

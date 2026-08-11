@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-database_file = "bank_accounts.json"
+database_file = Path(__file__).parent.parent / "bank_accounts.json"
 data = {'savings_accounts': [], 'current_accounts': []}
 
 if Path(database_file).exists():

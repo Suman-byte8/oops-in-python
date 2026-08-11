@@ -1,4 +1,4 @@
-from bank_account import BankAccount
+from models.bank_account import BankAccount
 from models.storage import save, data
 
 
@@ -29,8 +29,21 @@ class CurrentAccount(BankAccount):
             # check if minimum balance is met
             if self.balance - amount <=1000:
                 print('Minimum balance of 1000 required')
-            else:
-                self.balance -= amount
-                print(f"Withdrawal of {amount} successful")
+                return
+
+            self.balance -= amount
+            
+            # update stored account balance
+            for account in data['current_accounts']:
+                if account['account_number'] == self.account_number:
+                    account['balance'] = self.balance
+                    break
+
+            save()
+
+            print(f"Withdrawal of {amount} successful")
+            print(f"New balance: {self.balance}")
+
+
         else:
             print("Insufficient balance")
