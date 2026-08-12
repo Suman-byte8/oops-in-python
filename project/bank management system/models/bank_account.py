@@ -1,3 +1,4 @@
+
 from models.storage import save
 from abc import ABC, abstractmethod
 from models.storage import data
@@ -50,8 +51,15 @@ class BankAccount(ABC):
 
 
 # deposit
-    def deposit(self, amount):
-        self.balance += amount
+    def deposit(self, amount, account_number, account_type):
+        key = f"{account_type}_accounts"
+        for account in data[key]:
+            if account['account_number'] == account_number:
+                account['balance'] += amount
+                save()
+                print(f"Deposit of {amount} successful to {account_number}")
+                return
+        print("Account not found")
 
 # withdraw
     @abstractmethod

@@ -20,10 +20,31 @@ accounts_data = [
 # Create accounts
 for acc_num, acc_type, name, balance in accounts_data:
     if acc_type == "savings":
-        account = CurrentAccount(acc_num, acc_type, name, balance)
-    else:
         account = SavingsAccount(acc_num, acc_type, name, balance)
+    else:
+        account = CurrentAccount(acc_num, acc_type, name, balance)
     account.create_account()
+
+# Test Deposit
+print("\n--- Testing Deposit ---")
+test_acc_num = "7382687677967" # Patricia Miller's savings account
+test_acc_type = "savings"
+deposit_amount = 1000
+
+# Calling the deposit method
+# account.deposit(deposit_amount, test_acc_num, test_acc_type)
+
+account.deposit(15000, "44421495038829730", 'current')      # John Lopez's current account
+
+
+
+
+
+
+
+
+
+
 
 # print(savings_account.get_balance())        # 1000
 # savings_account.withdraw(500)               # Minimum balance of 500 required (1000 - 500 <= 500)
