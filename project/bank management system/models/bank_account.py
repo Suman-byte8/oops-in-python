@@ -62,9 +62,32 @@ class BankAccount(ABC):
         print("Account not found")
 
 # withdraw
-    @abstractmethod
-    def withdraw(self, amount):
-        pass
+    def withdraw(self, amount, account_number, account_type):
+        key = f"{account_type}_accounts"
+
+        for account in data[key]:
+            if account['account_number'] == account_number:
+                if amount > account['balance']:
+                    print("Insufficient balance")
+                    return
+                
+                if account_type == "current":
+                    if account['balance'] - amount < 1000:
+                        print('Minimum balance of 1000 required')
+                        return
+                else: # savings
+                    if account['balance'] - amount < 500:
+                        print('Minimum balance of 500 required')
+                        return
+                
+                account['balance'] -= amount
+                save()
+                print(f"Withdrawal of {amount} successful from {account_number}")
+                print(f"New balance: {account['balance']}")
+                return
+        
+        print("Account not found")
+
 
 # get balance
     def get_balance(self):

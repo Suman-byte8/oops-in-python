@@ -8,25 +8,3 @@ class SavingsAccount(BankAccount):
     def __init__(self, account_number, account_type, account_holder_name, initial_balance):
         super().__init__(account_number, account_type, account_holder_name, initial_balance)
 
-    # withdraw
-    def withdraw(self, amount):
-        if amount <= self.balance:
-            if self.balance - amount <=500:
-                print('Minimum balance of 500 required')
-                return
-
-            self.balance -= amount
-
-            # update stored account balance
-            for account in data['savings_accounts']:
-                if account['account_number'] == self.account_number:
-                    account['balance'] = self.balance
-                    break
-
-            save()
-
-            print(f"Withdrawal of {amount} successful")
-            print(f"New balance: {self.balance}")
-
-        else:
-            print("Insufficient balance")

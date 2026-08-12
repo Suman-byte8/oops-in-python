@@ -12,7 +12,7 @@
             "account_type": "savings",
             "account_holder_name": "Patricia Miller",
             "initial_balance": 45000,
-            "balance": 48000
+            "balance": 3500
         },
         {
             "account_number": "1926809822292",
@@ -56,7 +56,7 @@
             "account_type": "current",
             "account_holder_name": "John Lopez",
             "initial_balance": 3546458,
-            "balance": 3561458
+            "balance": 3557458
         },
         {
             "account_number": "9442754917159",

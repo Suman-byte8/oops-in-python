@@ -26,15 +26,19 @@ for acc_num, acc_type, name, balance in accounts_data:
     account.create_account()
 
 # Test Deposit
-print("\n--- Testing Deposit ---")
-test_acc_num = "7382687677967" # Patricia Miller's savings account
-test_acc_type = "savings"
-deposit_amount = 1000
+# print("\n--- Testing Deposit ---")
+# test_acc_num = "7382687677967" # Patricia Miller's savings account
+# test_acc_type = "savings"
+# deposit_amount = 1000
 
 # Calling the deposit method
 # account.deposit(deposit_amount, test_acc_num, test_acc_type)
+# account.deposit(15000, "44421495038829730", 'current')      # John Lopez's current account
 
-account.deposit(15000, "44421495038829730", 'current')      # John Lopez's current account
+
+# Test Withdrawal
+account.withdraw(1000, "44421495038829730", 'current')      # John Lopez's current account
+account.withdraw(44500, "7382687677967", 'savings')      # Patricia Miller's savings account
 
 
 
