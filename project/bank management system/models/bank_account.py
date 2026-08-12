@@ -1,4 +1,7 @@
+from models.storage import save
 from abc import ABC, abstractmethod
+from models.storage import data
+
 
 class BankAccount(ABC):
 
@@ -10,9 +13,41 @@ class BankAccount(ABC):
         self.balance = initial_balance
 
 # create account
-    @abstractmethod
     def create_account(self):
-        pass
+        if self.account_type == "current":
+            for account in data['current_accounts']:
+                if self.account_number == account['account_number']:
+                    print("Account number already exists")
+                    return
+            
+            data['current_accounts'].append({
+                'account_number': self.account_number,
+                'account_type': self.account_type,
+                'account_holder_name': self.account_holder_name,
+                'initial_balance': self.initial_balance,
+                'balance': self.balance
+            })
+            print(f"Current account created successfully for {self.account_holder_name}")
+            save()
+
+        elif self.account_type == "savings":
+            for account in data['savings_accounts']:
+                if self.account_number == account['account_number']:
+                    print("Account number already exists")
+                    return
+            
+            data['savings_accounts'].append({
+                'account_number': self.account_number,
+                'account_type': self.account_type,
+                'account_holder_name': self.account_holder_name,
+                'initial_balance': self.initial_balance,
+                'balance': self.balance
+            })
+            print(f"Savings account created successfully for {self.account_holder_name}")
+            save()
+        else:
+            print("Invalid account type")
+
 
 # deposit
     def deposit(self, amount):
@@ -31,7 +66,7 @@ class BankAccount(ABC):
     def transfer(self, amount, other_account):
         if amount <= self.balance:
             self.balance -= amount
-            other_account.balanceposit(amount)
+            other_account.deposit(amount)
             print(f"Transfer of {amount} successful")
         else:
             print("Insufficient balance")

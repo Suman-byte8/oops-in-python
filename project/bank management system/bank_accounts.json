@@ -8,26 +8,83 @@
             "balance": 1000
         },
         {
-            "account_number": "123456",
+            "account_number": "7382687677967",
             "account_type": "savings",
-            "account_holder_name": "Alice",
-            "initial_balance": 1000,
-            "balance": 1000
+            "account_holder_name": "Patricia Miller",
+            "initial_balance": 45000,
+            "balance": 45000
         },
         {
-            "account_number": "123456",
+            "account_number": "1926809822292",
             "account_type": "savings",
-            "account_holder_name": "Alice",
-            "initial_balance": 1000,
-            "balance": 1000
+            "account_holder_name": "Barbara Miller",
+            "initial_balance": 563654,
+            "balance": 563654
         },
         {
-            "account_number": "123456",
+            "account_number": "3438262463",
             "account_type": "savings",
-            "account_holder_name": "Alice",
-            "initial_balance": 1000,
-            "balance": 1000
+            "account_holder_name": "Elizabeth Hernandez",
+            "initial_balance": 45789,
+            "balance": 45789
+        },
+        {
+            "account_number": "5680210264842",
+            "account_type": "savings",
+            "account_holder_name": "Robert Johnson",
+            "initial_balance": 50000,
+            "balance": 50000
+        },
+        {
+            "account_number": "01759275672826306",
+            "account_type": "savings",
+            "account_holder_name": "Jennifer Lopez",
+            "initial_balance": 106500,
+            "balance": 106500
         }
     ],
-    "current_accounts": []
+    "current_accounts": [
+        {
+            "account_number": "789012",
+            "account_type": "current",
+            "account_holder_name": "Bob",
+            "initial_balance": 2000,
+            "balance": 1500
+        },
+        {
+            "account_number": "44421495038829730",
+            "account_type": "current",
+            "account_holder_name": "John Lopez",
+            "initial_balance": 3546458,
+            "balance": 3546458
+        },
+        {
+            "account_number": "9442754917159",
+            "account_type": "current",
+            "account_holder_name": "Barbara Smith",
+            "initial_balance": 456588,
+            "balance": 456588
+        },
+        {
+            "account_number": "842203480",
+            "account_type": "current",
+            "account_holder_name": "David Rodriguez",
+            "initial_balance": 12457899,
+            "balance": 12457899
+        },
+        {
+            "account_number": "4780887392",
+            "account_type": "current",
+            "account_holder_name": "William Rodriguez",
+            "initial_balance": 45789654,
+            "balance": 45789654
+        },
+        {
+            "account_number": "923819834762",
+            "account_type": "current",
+            "account_holder_name": "Robert Davis",
+            "initial_balance": 354687,
+            "balance": 354687
+        }
+    ]
 }
